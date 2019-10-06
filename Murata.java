@@ -22,9 +22,11 @@ public class Murata extends Player
 	 *
 	 * @return ジャンケンの手
 	 */
+	/*
 	public int showHand()
 	{
 		// 必ずグーを出す
 		return STONE;
 	}
+	*/
 }

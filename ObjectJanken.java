@@ -12,8 +12,20 @@ public class ObjectJanken
 		// Playerクラスの一種であるMurataクラスを生成。
 		Player murata = new Murata("村田さん");
 
+		// 村田さんに渡す戦略クラスを生成する
+		Tactics murataTactics = new RandomTactics();
+
+		// 村田さんに戦略クラスを渡す
+		murata.setTactics(murataTactics);
+
 		// Playerクラスの一種であるYamadaクラスを生成
 		Player yamada = new Player("山田さん");
+
+		// 山田さんに渡す戦略クラスを生成する
+		Tactics yamadaTactics = new RandomTactics();
+
+		// 山田さんに戦略クラスを渡す
+		yamada.setTactics(yamadaTactics);
 
 		// 村田さんと山田さんをプレイヤーとしてジャンケンを開始する
 		saito.startJanken(murata, yamada);

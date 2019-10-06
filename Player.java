@@ -16,6 +16,8 @@ public class Player {
 	private String name_;
 	/** プレイヤーの勝った回数 */
 	private int winCount_ = 0;
+	/** 与えられた戦略 */
+	private Tactics tactics_;
 
 	// ----------------
 	// コンストラクタ
@@ -32,6 +34,25 @@ public class Player {
 	 * ジャンケンの手を出す。
 	 * @return ジャンケンの手
 	 */
+	int showHand()
+	{
+		// 与えられた戦略を読んでジャンケンの手を決める
+		int hand = tactics_.readTactics();
+
+		// 決定した手を戻り値として返す
+		return hand;
+	}
+
+	/**
+	 * プレイヤーに戦略を渡す。
+	 *
+	 * @param tactics 戦略
+	 */
+	void setTactics(Tactics tactics)
+	{
+		tactics_ = tactics;
+	}
+	/*
 	public int showHand()
 	{
 		// ①実際の処理
@@ -61,6 +82,7 @@ public class Player {
 		}
 		return playerHand;
 	}
+	*/
 
 	/**
 	 * 審判から勝敗を聞く。
