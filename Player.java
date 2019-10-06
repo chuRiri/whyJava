@@ -5,9 +5,9 @@
  */
 public class Player {
 	// ジャンケンの手を表す定数
-	public static final int STONE = 0;
-	public static final int SCISSORS = 1;
-	public static final int PAPER = 2;
+	public static final int STONE = 1;
+	public static final int SCISSORS = 2;
+	public static final int PAPER = 3;
 
 	// ----------------
 	// プレイヤークラスの属性
